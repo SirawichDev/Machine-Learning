@@ -17,7 +17,7 @@ Y = np.array ( [ [ 0,1 ,1 ,1 ] ]).T
 
 syn0 = 2*np.random.random( ( 2,1 ) ) - 1
 
-for iter in xrange(10000):
+for iter in range(10000):
 
 	layer0 = X
 	layer1 = sigmoid(np.dot(layer0, syn0) )
@@ -26,5 +26,5 @@ for iter in xrange(10000):
 
 	syn0 += np.dot( layer0.T , layer1_delta )
 
-print "Output After Training By use Sigmoid Derivative Function: "
-print layer1
+print ("Output After Training By use Sigmoid Derivative Function: ")
+print (layer1)
