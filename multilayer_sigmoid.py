@@ -23,7 +23,7 @@ Y = np.array ( [[ 0,0,0,1] ] ).T
 syn0 = 2 * np.random.random((2, hidden0)) - 1 #ran 1-2
 syn1 = 2 * np.random.random((hidden0, hidden1)) - 1
 syn2 =  2 * np.random.random((hidden1, 1)) - 1
-for iter in xrange(epoch):
+for iter in range(epoch):
 
     layer0=X #layer0
     layer1 = sigmoid(np.dot( layer0, syn0) ) #output
@@ -43,5 +43,5 @@ for iter in xrange(epoch):
     syn1 += np.dot( layer1.T , layer2_delta )
     syn2 += np.dot( layer2.T , layer3_delta )
 
-print "Output After Training: "
-print layer3
+print ("Output After Training: ")
+print (layer3)
